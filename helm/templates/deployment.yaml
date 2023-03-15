@@ -6,9 +6,9 @@ metadata:
 spec:
   replicas: {{ .Values.ReplicaNumber }}
   selector:
-    matchLabels: {{ .Release.Name }}
+    matchLabels: 
 # set your user name
-      app: ypery-hello-world
+      app: {{ .Release.Name }}
   template:
     metadata:
       labels:
@@ -24,7 +24,7 @@ spec:
               protocol: TCP
           imagePullPolicy: IfNotPresent
 # update with the iamge you build in part 1
-          image: {{ .Valuses.containers.image }}:{{ .Values.container.tag }}
+          image: {{ .Values.containers.image }}:{{ .Values.containers.tag }}
       restartPolicy: Always
       terminationGracePeriodSeconds: 30
   strategy:
