@@ -2,7 +2,7 @@ ReplicaNumber: 3
 
 containers:
   containerPort: 8080
-  image: 'quay.io/ypery/web-app-node:v2'
+  image: 'quay.io/ypery/web-app-node'
   tag: 'base'
 
 service:
