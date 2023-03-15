@@ -1,0 +1,10 @@
+apiVersion: v1
+imagePullSecrets:
+- name: default-dockercfg-bq4k6
+- name: pull-secret
+kind: ServiceAccount
+metadata:
+  name: default
+  namespace: user17-application
+secrets:
+- name: default-dockercfg-bq4k6
