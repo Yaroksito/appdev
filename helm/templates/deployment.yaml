@@ -16,10 +16,10 @@ spec:
         app: {{ .Release.Name }}
     spec:
       volumes:
-      - name: index-html
-        configMap:
-          name: index.html
-          defaultMode: 420
+        - name: index-html
+          configMap:
+            name: index.html
+            defaultMode: 420
       containers:
         - resources: {}
           terminationMessagePath: /dev/termination-log
