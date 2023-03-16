@@ -55,7 +55,7 @@ spec:
             failureThreshold: 3
           env:
             - name: PORT
-              vaule: {{ .Values.containers.containerPort | quote }}
+              value: {{ .Values.containers.containerPort | quote }}
       restartPolicy: Always
       terminationGracePeriodSeconds: 30
   strategy:
