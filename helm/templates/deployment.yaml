@@ -10,7 +10,7 @@ spec:
 # set your user name
       app: {{ .Release.Name }}
   template:
-    smetadata:
+    metadata:
       labels:
 # set your user name
         app: {{ .Release.Name }}
